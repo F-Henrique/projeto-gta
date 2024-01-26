@@ -1,0 +1,65 @@
+body{
+
+    background-color: #282828;
+    color: #fff;
+}
+
+.cabecalho{
+    height: 80px;
+background-color: #0b0b0b;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 80px;
+border-bottom: 1px solid #282828;
+}
+.cabecalho .logo{
+display: flex;/* por padrão, o "flex" porganiza em linha*/
+gap: 15px;/* dá espaçamento entre os elementos da classe logo, dentro do cabeçalho*/
+}/* estiliza um elemento dentro de uma classe; escrevendo desta forma, a estilização atinge apena so "lo"go de dentro do cabecalho (pq poderia ser criado outra classe "logo" em outra parte da página*/
+
+.cabecalho .menu{
+display: flex;
+gap: 30px;
+
+}
+
+.cabecalho .menu li a{
+padding: 30px;
+color: #e8e8e8;
+font-weight: bolder;
+font-size: 15px;
+font-family: 'Chalet';
+}/* estilizando todos os "a", dentro de "li", dentro de "menu", do "cabecalho" */
+/**/
+.cabecalho .menu li a:hover{
+border-bottom: 2px solid #fff;
+}/* "hover" é uma pseudo-classe; a idéia é "quando o mouse passar 'por cima' do elemento, aplique um determinado estilo" */
+
+
+.home{
+
+    background-color: aqua;
+    display: flex;
+    position: relative;
+    min-height: calc(100vh - 80px);/* Altura mínima, utilizando uma fórmula: vh="view height"; eu leio que estou pegando a altura da janela e subtraindo os 80 do meu cabeçalho*/
+}
+
+/*aplicando efeito degradê; os "dois pontos" seguidos indica um pseudoelemento criado pelo css, após o "home"*/
+.home::after{
+
+content: '';
+position: absolute;/* o "absolute" retira o elemento do fluxo normal da página (o fluxo normal é que o elemento criado fique abaixo de algo; como está absolute, ele vem pra cima do elemento, de forma que o degrad~e possa ser aplicado */
+height: 100%;/* 100% da altura disponível no elemento-pai; se baseia na altura do "pai" pra indicar a altura do elemento. No caso, ocupe toda a altura e largura do "home"*/
+width: 100%;
+background: linear-gradient(90deg, rgb(0, 0, 0, .85),rgba(0, 0, 0, .7) 35%, transparent 65%);
+}
+
+.home .imagem-fundo{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+

@@ -1,0 +1,12 @@
+*{
+margin: 0; /* margin: dá espaçamento externo dos elementos*/
+padding: 0;/* padding: dá espaçamento interno dos elementos (distância entre o conteúdo e a borda do elemento)*/
+}
+
+ul{
+list-style: none;/* muda a cor dos pontos de índice*/
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
